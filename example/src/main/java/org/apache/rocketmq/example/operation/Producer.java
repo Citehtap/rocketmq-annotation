@@ -41,7 +41,7 @@ public class Producer {
 
             DefaultMQProducer producer = new DefaultMQProducer(group);
             producer.setInstanceName(Long.toString(System.currentTimeMillis()));
-
+            producer.setNamesrvAddr("127.0.0.1:9876");
             producer.start();
 
             for (int i = 0; i < Integer.parseInt(msgCount); i++) {

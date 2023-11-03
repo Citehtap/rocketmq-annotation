@@ -62,7 +62,7 @@ public class Consumer {
                     return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
                 }
             });
-
+            consumer.setNamesrvAddr("127.0.0.1:9876");
             consumer.start();
 
             System.out.printf("Consumer Started.%n");
